@@ -112,7 +112,9 @@ namespace QRCodeMaker
             {
                  if (strText.Trim() != "") //验证输入的生成内容是否为空             
                  {
-                    Bitmap bCode = getcode(strText); //获取二维码图片                 
+                    if (!strText.EndsWith("/"))
+                        strText += "/";
+                    Bitmap bCode = getcode(strText + minValue); //获取二维码图片                 
                     if (logoImg == null)
                     {
                         ORCodeImage = bCode;
