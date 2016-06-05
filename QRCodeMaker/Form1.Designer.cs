@@ -154,6 +154,11 @@
             // minNumericUpDown
             // 
             this.minNumericUpDown.Location = new System.Drawing.Point(192, 147);
+            this.minNumericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.minNumericUpDown.Name = "minNumericUpDown";
             this.minNumericUpDown.Size = new System.Drawing.Size(157, 21);
             this.minNumericUpDown.TabIndex = 15;
@@ -161,6 +166,11 @@
             // maxNumericUpDown
             // 
             this.maxNumericUpDown.Location = new System.Drawing.Point(441, 146);
+            this.maxNumericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.maxNumericUpDown.Name = "maxNumericUpDown";
             this.maxNumericUpDown.Size = new System.Drawing.Size(157, 21);
             this.maxNumericUpDown.TabIndex = 16;
