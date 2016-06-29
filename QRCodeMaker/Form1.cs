@@ -131,10 +131,11 @@ namespace QRCodeMaker
                         ORCodeImage = bCode;
                     }
 
-                    string filePathName = savePathTextBox.Text + "\\" + minValue.ToString() + ".jpg";
+                    System.Drawing.Imaging.ImageFormat[] formats = { System.Drawing.Imaging.ImageFormat.Jpeg, System.Drawing.Imaging.ImageFormat.Bmp, System.Drawing.Imaging.ImageFormat.Png };
+                    string filePathName = savePathTextBox.Text + "\\" + minValue.ToString() + "." + comboBox1.Text;
                     if (!Directory.Exists(savePathTextBox.Text))
                         Directory.CreateDirectory(savePathTextBox.Text);
-                    ORCodeImage.Save(filePathName);
+                    ORCodeImage.Save(filePathName, formats[comboBox1.SelectedIndex]);
                  }
                  else
                  {
@@ -143,6 +144,7 @@ namespace QRCodeMaker
             }
 
             MessageBox.Show("二维码生成完成");
+            System.Diagnostics.Process.Start("explorer.exe", savePathTextBox.Text);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -151,6 +153,11 @@ namespace QRCodeMaker
             if (saveFile.ShowDialog() == DialogResult.OK)
                 savePathTextBox.Text = saveFile.SelectedPath;
             //saveFile.Filter>      
-        }             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+        }
     }
 }

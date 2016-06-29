@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.minNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.maxNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.minNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +119,7 @@
             // 
             // makebutton
             // 
-            this.makebutton.Location = new System.Drawing.Point(386, 259);
+            this.makebutton.Location = new System.Drawing.Point(386, 290);
             this.makebutton.Name = "makebutton";
             this.makebutton.Size = new System.Drawing.Size(75, 23);
             this.makebutton.TabIndex = 11;
@@ -127,7 +129,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(726, 211);
+            this.button3.Location = new System.Drawing.Point(726, 242);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 14;
@@ -137,7 +139,7 @@
             // 
             // savePathTextBox
             // 
-            this.savePathTextBox.Location = new System.Drawing.Point(191, 212);
+            this.savePathTextBox.Location = new System.Drawing.Point(191, 243);
             this.savePathTextBox.Name = "savePathTextBox";
             this.savePathTextBox.Size = new System.Drawing.Size(519, 21);
             this.savePathTextBox.TabIndex = 13;
@@ -145,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(97, 215);
+            this.label5.Location = new System.Drawing.Point(97, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 12);
             this.label5.TabIndex = 12;
@@ -175,11 +177,35 @@
             this.maxNumericUpDown.Size = new System.Drawing.Size(157, 21);
             this.maxNumericUpDown.TabIndex = 16;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "jpg",
+            "bmp",
+            "png"});
+            this.comboBox1.Location = new System.Drawing.Point(192, 198);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 20);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(134, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "图片格式";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 606);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.maxNumericUpDown);
             this.Controls.Add(this.minNumericUpDown);
             this.Controls.Add(this.button3);
@@ -195,6 +221,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.minNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxNumericUpDown)).EndInit();
             this.ResumeLayout(false);
@@ -219,6 +246,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown minNumericUpDown;
         private System.Windows.Forms.NumericUpDown maxNumericUpDown;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
